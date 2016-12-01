@@ -1,4 +1,7 @@
 <?php
+
+use Dahunicorn\Controller\SiteController as FallbackCtrl;
+
 if (isset($_GET["r"])) {
 	$route = $_GET["r"];
 	if (strpos($route,"/") === FALSE)
@@ -9,6 +12,6 @@ if (isset($_GET["r"])) {
 	$c = new $controller();
 	$c->$action();
 } else {
-	$c = new SiteController();
+	$c = new FallbackCtrl();
 	$c->index();
 }
