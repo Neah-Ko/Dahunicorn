@@ -78,8 +78,8 @@ $markers = [
             title="<?= $marker_data['title'] ?>">
           <?= $marker_data['content'] ?>
         </google-map-marker>
-        <?php } ?>
-      <?php } ?>
+      <?php endif; ?>
+    <?php endforeach; ?>
     </google-map>
   </div>
 </section>
