@@ -1,13 +1,13 @@
 <?php
-Class Site extends Model() {
-	$_idsite;
-	$_site_nom;
-	$_site_description;
-	$_site_periode;
-	$_site_rue;
-	$_site_complement;
-	$_site_cp;
-	$_site_ville;
-	$_site_latitude;
-	$_site_longitude;
+Class Site extends Model {
+	protected $_idsite;
+    protected $_site_nom;
+    protected $_site_description;
+    protected $_site_periode;
+    protected $_site_rue;
+    protected $_site_complement;
+    protected $_site_cp;
+    protected $_site_ville;
+    protected $_site_latitude;
+    protected $_site_longitude;
 }
