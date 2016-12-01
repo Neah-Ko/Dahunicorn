@@ -1,4 +1,4 @@
 <?php
-class TypeSite extends Model() {
-	
+class Typesite extends Model() {
+
 }
