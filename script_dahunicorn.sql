@@ -41,9 +41,10 @@ create table type (
 /* Table : typepoint                                   */
 /*==============================================================*/
 create table typepoint (
-   idtype             		INT4          null,
-   idpoint             		INT4          null,
-   typepoint_quantite		INT4		  null,
+   idtype             		    INT4          null,
+   idpoint             		    INT4          null,
+   typepoint_quantite		    INT4		  null,
+   typepoint_quantite_estimee  INT4       null,
    constraint PK_RSR primary key (idtype, idpoint)
 );
 
