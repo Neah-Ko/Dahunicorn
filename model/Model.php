@@ -33,18 +33,37 @@ class Model {
 
 	}
 
-	public static function findAll() {
+	// public static function findAll() {
+	// 	$class = get_called_class();
+	// 	$table = strtolower($class);
+	// 	$st = db()->prepare("select id$table from $table");
+	// 	$st->execute();
+	// 	$list = array();
+	// 	while($row = $st->fetch(PDO::FETCH_ASSOC)) {
+	// 		$list[] = new $class($row["id".$table]);
+	// 	}
+	// 	return $list;
+	// }
+
+
+	public static function findAllSelect($where=null, $option=null) {
+
 		$class = get_called_class();
 		$table = strtolower($class);
-		$st = db()->prepare("select id$table from $table");
-		$st->execute();
-		$list = array();
-		while($row = $st->fetch(PDO::FETCH_ASSOC)) {
-			$list[] = new $class($row["id".$table]);
+		if($where != null){
+			$requete = "select * from $table where ".$where;
 		}
+		else{
+			$requete = "select * from $table";
+		}
+		if($option != null){
+			$requete = $requete." ".$option;
+		}
+		$st = db()->prepare($requete);
+		$st->execute();
+		$list = $st->fetchAll();
 		return $list;
 	}
-
 
 	public function __get($fieldName) {
 		$varName = "_".$fieldName;
