@@ -1,25 +1,25 @@
 
 
-drop table if exists point cascade;
+drop table if exists lieu cascade;
 drop table if exists type cascade;
-drop table if exists typepoint cascade;
+drop table if exists typelieu cascade;
 
 
 /*==============================================================*/
-/* Table : point                                    */
+/* Table : lieu                                    */
 /*==============================================================*/
-create table point (
-   idpoint             		SERIAL               not null,
-   point_nom              	VARCHAR(50)          null,
-   point_description         VARCHAR(200)          null,
-   point_periode          	VARCHAR(50)          null,
-   point_rue        			VARCHAR(50)         null,
-   point_complement        	VARCHAR(50)         null,
-   point_cp               	VARCHAR(10)          null,
-   point_ville            	VARCHAR(50)          null,
-   point_latitude            FLOAT8          null,
-   point_longitude           FLOAT8                 null,
-   constraint PK_RSR primary key (idpoint)
+create table lieu (
+   idlieu             		MEDIUMINT               not null AUTO_INCREMENT,
+   lieu_nom              	VARCHAR(50)          null,
+   lieu_description         VARCHAR(200)          null,
+   lieu_periode          	VARCHAR(50)          null,
+   lieu_rue        			VARCHAR(50)         null,
+   lieu_complement        	VARCHAR(50)         null,
+   lieu_cp               	VARCHAR(10)          null,
+   lieu_ville            	VARCHAR(50)          null,
+   lieu_latitude            NUMERIC(8)          null,
+   lieu_longitude           NUMERIC(8)                 null,
+   constraint PK_RSR primary key (idlieu)
 );
 
 
@@ -29,7 +29,7 @@ create table point (
 /* Table : type                                    */
 /*==============================================================*/
 create table type (
-   idtype             		SERIAL               not null,
+   idtype             		MEDIUMINT               not null AUTO_INCREMENT,
    type_libelle             VARCHAR(50)          null,
    constraint PK_RSR primary key (idtype)
 );
@@ -38,14 +38,14 @@ create table type (
 
 
 /*==============================================================*/
-/* Table : typepoint                                   */
+/* Table : typelieu                                   */
 /*==============================================================*/
-create table typepoint (
-   idtype             		    INT4          null,
-   idpoint             		    INT4          null,
-   typepoint_quantite		    INT4		  null,
-   typepoint_quantite_estimee  INT4       null,
-   constraint PK_RSR primary key (idtype, idpoint)
+create table typelieu (
+   idtype             		    INT(4)          null,
+   idlieu             		    INT(4)          null,
+   typelieu_quantite		    INT(4)		  null,
+   typelieu_quantite_estimee  INT(4)       null,
+   constraint PK_RSR primary key (idtype, idlieu)
 );
 
 
@@ -55,20 +55,20 @@ create table typepoint (
 
 
 
-alter table typepoint
+alter table typelieu
    add constraint FK_TYPSIT_TYP foreign key (idtype)
       references type (idtype)
       on delete restrict on update restrict;
-create index IX_TYPSIT_TYP_ID ON typepoint(idtype);
+create index IX_TYPSIT_TYP_ID ON typelieu(idtype);
 
 
 
 
-alter table typepoint
-   add constraint FK_TYPSIT_SIT foreign key (idpoint)
-      references point (idpoint)
+alter table typelieu
+   add constraint FK_TYPSIT_SIT foreign key (idlieu)
+      references lieu (idlieu)
       on delete restrict on update restrict;
-create index IX_TYPSIT_SIT_ID ON typepoint(idpoint);
+create index IX_TYPSIT_SIT_ID ON typelieu(idlieu);
 
 
 
