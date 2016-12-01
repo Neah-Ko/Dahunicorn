@@ -1,5 +1,5 @@
 <?php
-class Type extends Model() {
+class Type extends Model {
 	$_idtype;
 	$_type_libelle;
 }

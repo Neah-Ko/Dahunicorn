@@ -1,4 +1,4 @@
 <?php
-class SiteAssoc extends Model() {
+class SiteAssoc extends Model {
 	
 }

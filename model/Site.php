@@ -1,5 +1,5 @@
 <?php
-Class Site extends Model() {
+Class Site extends Model {
 	$_idsite;
 	$_site_nom;
 	$_site_description;

@@ -1,5 +1,5 @@
 <?php
-class Association extends Model() {
+class Association extends Model {
 	protected $_idAssociation;
 	protected $_nom;
 	protected $_description;
