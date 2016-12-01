@@ -6,6 +6,9 @@
 class LieuController extends Controller
 {
     public function index() {
-        $this->render("index");
+        $lieu = new Lieu();
+        $this->render("index", [
+            "lieux" => $lieu->getAllJson()
+        ]);
     }
 }
