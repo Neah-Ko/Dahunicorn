@@ -1,6 +1,6 @@
 <?php
 
-include_once 'Dahunicorn\Controller\SiteController' as FallbackCtrl;
+use Dahunicorn\Controller\SiteController as FallbackCtrl;
 
 if (isset($_GET["r"])) {
 	$route = $_GET["r"];
