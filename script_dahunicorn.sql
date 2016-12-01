@@ -1,25 +1,25 @@
 
 
-drop table if exists site cascade;
+drop table if exists point cascade;
 drop table if exists type cascade;
-drop table if exists typesite cascade;
+drop table if exists typepoint cascade;
 
 
 /*==============================================================*/
-/* Table : site                                    */
+/* Table : point                                    */
 /*==============================================================*/
-create table site (
-   idsite             		SERIAL               not null,
-   site_nom              	VARCHAR(50)          null,
-   site_description         VARCHAR(200)          null,
-   site_periode          	VARCHAR(50)          null,
-   site_rue        			VARCHAR(50)         null,
-   site_complement        	VARCHAR(50)         null,
-   site_cp               	VARCHAR(10)          null,
-   site_ville            	VARCHAR(50)          null,
-   site_latitude            FLOAT8          null,
-   site_longitude           FLOAT8                 null,
-   constraint PK_RSR primary key (idsite)
+create table point (
+   idpoint             		SERIAL               not null,
+   point_nom              	VARCHAR(50)          null,
+   point_description         VARCHAR(200)          null,
+   point_periode          	VARCHAR(50)          null,
+   point_rue        			VARCHAR(50)         null,
+   point_complement        	VARCHAR(50)         null,
+   point_cp               	VARCHAR(10)          null,
+   point_ville            	VARCHAR(50)          null,
+   point_latitude            FLOAT8          null,
+   point_longitude           FLOAT8                 null,
+   constraint PK_RSR primary key (idpoint)
 );
 
 
@@ -38,13 +38,13 @@ create table type (
 
 
 /*==============================================================*/
-/* Table : typesite                                   */
+/* Table : typepoint                                   */
 /*==============================================================*/
-create table typesite (
+create table typepoint (
    idtype             		INT4          null,
-   idsite             		INT4          null,
-   typesite_quantite		INT4		  null,
-   constraint PK_RSR primary key (idtype, idsite)
+   idpoint             		INT4          null,
+   typepoint_quantite		INT4		  null,
+   constraint PK_RSR primary key (idtype, idpoint)
 );
 
 
@@ -54,20 +54,20 @@ create table typesite (
 
 
 
-alter table typesite
+alter table typepoint
    add constraint FK_TYPSIT_TYP foreign key (idtype)
       references type (idtype)
       on delete restrict on update restrict;
-create index IX_TYPSIT_TYP_ID ON typesite(idtype);
+create index IX_TYPSIT_TYP_ID ON typepoint(idtype);
 
 
 
 
-alter table typesite
-   add constraint FK_TYPSIT_SIT foreign key (idsite)
-      references site (idsite)
+alter table typepoint
+   add constraint FK_TYPSIT_SIT foreign key (idpoint)
+      references point (idpoint)
       on delete restrict on update restrict;
-create index IX_TYPSIT_SIT_ID ON typesite(idsite);
+create index IX_TYPSIT_SIT_ID ON typepoint(idpoint);
 
 
 
