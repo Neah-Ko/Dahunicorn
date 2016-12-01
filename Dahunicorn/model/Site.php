@@ -1,5 +1,8 @@
 <?php
-Class Site extends Model {
+
+namespace Dahunicorn\Model;
+
+class Site extends Model {
 	protected $_idsite;
     protected $_site_nom;
     protected $_site_description;

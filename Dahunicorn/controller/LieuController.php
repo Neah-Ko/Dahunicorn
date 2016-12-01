@@ -1,5 +1,7 @@
 <?php
 
+namespace Dahunicorn\Controller;
+
 /**
  * Controlleur gérant toutes les actions liées à un lieu.
  */
@@ -17,7 +19,7 @@ class LieuController extends Controller
 
     public function addReserve(){
     	//$this->render("fiche");
-    	if (isset(parameters()["nbpersonnes"]) ) { 
+    	if (isset(parameters()["nbpersonnes"]) ) {
 
     		$d = typelieu::findAllSelect("idlieu=2 and idtype=1");//parameters()['res_id']
 print_r($d);
@@ -30,7 +32,7 @@ print_r($d);
 
 			// $message = "Votre photo a été correctement ajouté";
 			// header("Location: ?r=message_succes_erreur/redirect&message=".$message);
-    		
+
     	}
     	else {
     		//$this->render("add_resto");

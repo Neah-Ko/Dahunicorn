@@ -1,5 +1,8 @@
 <?php
-class Model {
+
+namespace Dahunicorn\Model;
+
+abstract class Model {
 	public function __construct($id=null) {
 		$class = get_class($this);
 		$table = strtolower($class);
@@ -103,5 +106,3 @@ class Model {
 	}
 
 }
-
-

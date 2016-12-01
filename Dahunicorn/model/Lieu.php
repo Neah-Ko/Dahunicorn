@@ -1,5 +1,7 @@
 <?php
 
+namespace Dahunicorn\Model;
+
 /**
  * Représente un lieu ou site.
  */
