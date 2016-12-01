@@ -1,5 +1,9 @@
 <?php
-$db = new PDO("str");
+$db = new PDO(
+    'mysql:host=localhost;dbname=c9',
+    'homestead',
+    'secret'
+);
 
 function db() {
 	global $db;
