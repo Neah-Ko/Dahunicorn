@@ -112,7 +112,7 @@ $markers = [
 <script>
     var pages = document.querySelector('iron-pages');
     pages.addEventListener('click', function(e) {
-      if( pages.selected < pages.childElementCount ) {
+      if( pages.selected < pages.childElementCount - 1 ) {
         pages.selectNext();
       }
     });
