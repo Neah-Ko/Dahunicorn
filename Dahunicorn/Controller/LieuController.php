@@ -37,4 +37,8 @@ class LieuController extends Controller
     	}
     }
 
+    public function seachLieu(){
+
+    }
+
 }
