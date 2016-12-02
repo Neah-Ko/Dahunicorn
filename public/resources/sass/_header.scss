@@ -1,8 +1,10 @@
 header {
   height: 100px;
   background-color: $noir;
+  box-shadow: 0 0 20px $noir;
   h1 {
     text-align: center;
+    @include vertical-align();
     color: $beige;
   }
 }
