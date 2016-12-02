@@ -61,7 +61,6 @@ $markers = [
     Santé : <input type="checkbox" name="sante">
   </form>
 </div>
-
 <section class="">
   <div class="maps">
     <google-map class="maps-cmp" language="fr" min-zoom="7" latitude="45.525241" longitude="5.84505" fit-to-markers api-key="AIzaSyBTswMklmPyz-JLcu_L8gO2T_8pmucovM0">
