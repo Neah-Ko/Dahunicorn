@@ -36,17 +36,17 @@ abstract class Model {
 
 	}
 
-	// public static function findAll() {
-	// 	$class = get_called_class();
-	// 	$table = strtolower($class);
-	// 	$st = db()->prepare("select id$table from $table");
-	// 	$st->execute();
-	// 	$list = array();
-	// 	while($row = $st->fetch(PDO::FETCH_ASSOC)) {
-	// 		$list[] = new $class($row["id".$table]);
-	// 	}
-	// 	return $list;
-	// }
+	 public static function findAll() {
+	 	$class = get_called_class();
+	 	$table = strtolower($class);
+	 	$st = db()->prepare("select id$table from $table");
+	 	$st->execute();
+	 	$list = array();
+	 	while($row = $st->fetch(PDO::FETCH_ASSOC)) {
+	 		$list[] = new $class($row["id".$table]);
+	 	}
+	 	return $list;
+	 }
 
 
 	public static function findAllSelect($where=null, $option=null) {
