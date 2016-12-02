@@ -53,48 +53,64 @@ $markers = [
 
 ?>
 
-<section class="need-choice">
-  <div class="title">
-      <h2>What do you need first ?</h2>
-  </div>
-  <div class="selection">
-    <paper-listbox>
-      <paper-item>
-        <iron-image preload placeholder="/public/resources/logos/bed.svg" fade id="bed-image" alt="Logement" class="sized" sizing="contain" src="/public/resources/logos/bed.png"></iron-image>
-      </paper-item>
-      <paper-item>
-        <iron-image preload placeholder="/public/resources/logos/food.svg" fade id="food-image" alt="Nourriture" class="sized" sizing="contain" src="/public/resources/logos/food.png"></iron-image>
-      </paper-item>
-      <paper-item>
-        <iron-image preload placeholder="/public/resources/logos/health.svg" fade id="health-image" alt="Santé" class="sized" sizing="contain" src="/public/resources/logos/health.png"></iron-image>
-      </paper-item>
-    </paper-listbox>
-  </div>
-</section>
+<iron-pages selected="0">
+    <section class="need-choice">
+        <div class="title">
+            <h2>What are your first need ?</h2>
+            <iron-image preload placeholder="/public/resources/logos/think_man.svg" fade id="think_man-image" alt="Vos besoins" class="sized" sizing="contain" src="/public/resources/logos/think_man.png"></iron-image>
+        </div>
+        <div class="selection">
+            <paper-listbox>
+                <paper-item>
+                    <iron-image preload placeholder="/public/resources/logos/bed.svg" fade id="bed-image" alt="Logement" class="sized" sizing="contain" src="/public/resources/logos/bed.png"></iron-image>
+                </paper-item>
+                <paper-item>
+                    <iron-image preload placeholder="/public/resources/logos/food.svg" fade id="food-image" alt="Nourriture" class="sized" sizing="contain" src="/public/resources/logos/food.png"></iron-image>
+                </paper-item>
+                <paper-item>
+                    <iron-image preload placeholder="/public/resources/logos/health.svg" fade id="health-image" alt="Santé" class="sized" sizing="contain" src="/public/resources/logos/health.png"></iron-image>
+                </paper-item>
+            </paper-listbox>
+        </div>
+    </section>
 
-<section class="search-result">
-  <div class="maps">
-    <paper-progress class="progress-cmp" indeterminate></paper-progress>
-    <google-map class="maps-cmp hidden" language="fr" min-zoom="7" latitude="45.525241" longitude="5.84505" fit-to-markers api-key="AIzaSyBTswMklmPyz-JLcu_L8gO2T_8pmucovM0">
-      <?php foreach ($markers as $marker_name => $marker_data): ?>
-        <?php if( isset( $marker_data['enabled'] ) && $marker_data['enabled'] ): ?>
-        <google-map-marker
-            class="<?= $marker_name ?>"
-            latitude="<?= $marker_data['latitude'] ?>"
-            longitude="<?= $marker_data['longitude'] ?>"
-            title="<?= $marker_data['title'] ?>">
-          <?= $marker_data['content'] ?>
-        </google-map-marker>
-      <?php endif; ?>
-    <?php endforeach; ?>
-    </google-map>
-    <script type="text/javascript">
-      var map = document.querySelector('google-map');
-      var paper_progress = document.querySelector('paper-progress');
-      map.addEventListener('google-map-ready', function(e) {
-        paper_progress.classList.add("hidden");
-        map.classList.remove("hidden");
-      });
-    </script>
-  </div>
-</section>
+    <section class="range-choice">
+        <div class="title">
+            <h2>What do you need first ?</h2>
+            <iron-image preload placeholder="/public/resources/logos/search_man.svg" fade id="search_man-image" alt="Distance de recherche" class="sized" sizing="contain" src="/public/resources/logos/search_man.png"></iron-image>
+        </div>
+        <div class="selection">
+          <paper-slider pin value="5"></paper-slider>
+        </div>
+    </section>
+
+    <section class="search-result">
+        <div class="maps">
+            <paper-progress class="progress-cmp" indeterminate></paper-progress>
+            <google-map class="maps-cmp hidden" language="fr" min-zoom="7" latitude="45.525241" longitude="5.84505" fit-to-markers api-key="AIzaSyBTswMklmPyz-JLcu_L8gO2T_8pmucovM0">
+                <?php foreach ($markers as $marker_name => $marker_data): ?>
+                <?php if( isset( $marker_data['enabled'] ) && $marker_data['enabled'] ): ?>
+                <google-map-marker class="<?= $marker_name ?>" latitude="<?= $marker_data['latitude'] ?>" longitude="<?= $marker_data['longitude'] ?>" title="<?= $marker_data['title'] ?>">
+                    <?= $marker_data['content'] ?>
+                </google-map-marker>
+                <?php endif; ?>
+                <?php endforeach; ?>
+            </google-map>
+            <script type="text/javascript">
+                var map = document.querySelector('google-map');
+                var paper_progress = document.querySelector('paper-progress');
+                map.addEventListener('google-map-ready', function(e) {
+                    paper_progress.classList.add("hidden");
+                    map.classList.remove("hidden");
+                });
+            </script>
+        </div>
+    </section>
+</iron-pages>
+<script>
+    var pages = document.querySelector('iron-pages');
+    pages.addEventListener('click', function(e) {
+        console.log(e);
+        pages.selectNext();
+    });
+</script>
