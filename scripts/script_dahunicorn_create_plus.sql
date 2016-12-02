@@ -17,6 +17,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 CREATE TABLE IF NOT EXISTS `association` (
   `idassociation` int(11) NOT NULL AUTO_INCREMENT,
+  `association_siren` int(11) NOT NULL DEFAULT NULL,
+  `association_tel` char(10) NOT NULL DEFAULT NULL,
   `association_nom` varchar(50) DEFAULT NULL,
   `association_description` varchar(200) DEFAULT NULL,
   `association_mail` varchar(50) DEFAULT NULL,
