@@ -1,5 +1,5 @@
 .maps {}
 
-.maps .maps-cmp {
+.maps .maps-cmp.ready {
     min-height: 500px;
 }
