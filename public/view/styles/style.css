@@ -13,7 +13,7 @@ header {
   background-color: #2C363F;
   box-shadow: 0 0 20px #2C363F;
 }
-/* line 5, ../../resources/sass/_header.scss */
+/* line 6, ../../resources/sass/_header.scss */
 header h1 {
   font-size: 2rem;
   text-align: center;
@@ -25,18 +25,22 @@ body {
   color: #2C363F;
   background-color: #F2E7AC;
 }
-/* line 4, ../../resources/sass/_body.scss */
-body h2 {
-  background-color: rgba(242, 68, 5, 0.5);
-  padding: 10px;
-  text-align: center;
+/* line 5, ../../resources/sass/_body.scss */
+body main {
+  position: relative;
 }
 
 /* line 1, ../../resources/sass/_map.scss */
 .need-choice {
   background: #F29F05;
 }
-/* line 7, ../../resources/sass/_map.scss */
+/* line 5, ../../resources/sass/_map.scss */
+.need-choice .title h2 {
+  background-color: rgba(242, 68, 5, 0.5);
+  padding: 10px;
+  text-align: center;
+}
+/* line 13, ../../resources/sass/_map.scss */
 .need-choice .selection paper-listbox {
   display: -webkit-box;
   display: -webkit-flex;
@@ -52,22 +56,23 @@ body h2 {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: inherit;
 }
-/* line 15, ../../resources/sass/_map.scss */
+/* line 22, ../../resources/sass/_map.scss */
 .need-choice .selection paper-listbox paper-item iron-image {
   height: 150px;
   width: 150px;
 }
 
-/* line 24, ../../resources/sass/_map.scss */
+/* line 31, ../../resources/sass/_map.scss */
 .maps {
   position: relative;
 }
-/* line 27, ../../resources/sass/_map.scss */
+/* line 34, ../../resources/sass/_map.scss */
 .maps .maps-cmp {
   min-height: 500px;
 }
-/* line 31, ../../resources/sass/_map.scss */
+/* line 38, ../../resources/sass/_map.scss */
 .maps .progress-cmp {
   display: block;
   width: 100%;
@@ -81,7 +86,7 @@ body h2 {
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
-/* line 43, ../../resources/sass/_map.scss */
+/* line 50, ../../resources/sass/_map.scss */
 .maps .hidden {
   opacity: 0;
   -webkit-transition: 200ms ease-in-out;

@@ -53,10 +53,6 @@ $markers = [
 
 ?>
 
-<header>
-    <h1>HELP FOR REFUGEES</h1>
-</header>
-
 <section class="need-choice">
   <div class="title">
       <h2>What do you need first ?</h2>

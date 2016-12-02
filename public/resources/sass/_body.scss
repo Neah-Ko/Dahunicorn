@@ -1,9 +1,8 @@
 body {
-  color: $noir;
-  background-color: $beige;
-  h2 {
-    background-color: transparentize($orange, 0.5);
-    padding: 10px;
-    text-align: center;
-  }
+    color: $noir;
+    background-color: $beige;
+
+    main {
+        position: relative;
+    }
 }

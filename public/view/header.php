@@ -24,9 +24,12 @@
 </head>
 
 <body>
+	<nav>
+		<ul>
+			<li><a href="index.php/?r=Association/Register">Enregistrer une association</a></li>
+		</ul>
+	</nav>
+	<header>
+	    <h1>HELP FOR REFUGEES</h1>
+	</header>
 	<main>
-		<nav>
-			<ul>
-				<li><a href="index.php/?r=Association/Register">Enregistrer une association</a></li>
-			</ul>
-		</nav>

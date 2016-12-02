@@ -1,7 +1,13 @@
 .need-choice {
-  background: $jaune;
+    background: $jaune;
 
-    .title {}
+    .title {
+        h2 {
+            background-color: transparentize($orange, 0.5);
+            padding: 10px;
+            text-align: center;
+        }
+    }
 
     .selection {
         paper-listbox {
@@ -10,12 +16,13 @@
             max-width: 600px;
             align-items: center;
             justify-content: center;
+            background: inherit;
 
             paper-item {
-              iron-image {
-                height: 150px;
-                width: 150px;
-              }
+                iron-image {
+                    height: 150px;
+                    width: 150px;
+                }
             }
         }
     }
