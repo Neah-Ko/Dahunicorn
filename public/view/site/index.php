@@ -60,13 +60,13 @@ $markers = [
   <div class="selection">
     <paper-listbox>
       <paper-item>
-        <img src="" alt="Logement" />
+        <img src="/public/recources/logos/bed.svg" alt="Logement" />
       </paper-item>
       <paper-item>
-        <img src="" alt="Nourriture" />
+        <img src="/public/recources/logos/food.svg" alt="Nourriture" />
       </paper-item>
       <paper-item>
-        <img src="" alt="Santé" />
+        <img src="/public/recources/logos/health.svg" alt="Santé" />
       </paper-item>
     </paper-listbox>
   </div>
@@ -75,7 +75,7 @@ $markers = [
 <section class="search-result">
   <div class="maps">
     <paper-progress class="progress-cmp" indeterminate></paper-progress>
-    <google-map class="maps-cmp" language="fr" min-zoom="7" latitude="45.525241" longitude="5.84505" fit-to-markers api-key="AIzaSyBTswMklmPyz-JLcu_L8gO2T_8pmucovM0">
+    <google-map class="maps-cmp hidden" language="fr" min-zoom="7" latitude="45.525241" longitude="5.84505" fit-to-markers api-key="AIzaSyBTswMklmPyz-JLcu_L8gO2T_8pmucovM0">
       <?php foreach ($markers as $marker_name => $marker_data): ?>
         <?php if( isset( $marker_data['enabled'] ) && $marker_data['enabled'] ): ?>
         <google-map-marker
@@ -92,8 +92,8 @@ $markers = [
       var map = document.querySelector('google-map');
       var paper_progress = document.querySelector('paper-progress');
       map.addEventListener('google-map-ready', function(e) {
-        paper_progress.classList.add("hide");
-        map.classList.remove("ready");
+        paper_progress.classList.add("hidden");
+        map.classList.remove("hidden");
       });
     </script>
   </div>

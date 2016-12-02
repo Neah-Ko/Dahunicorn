@@ -1,10 +1,9 @@
-/* line 1, ../../../ressources/sass/_main.scss */
 * {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 3, ../../../ressources/sass/_map.scss */
-.maps .maps-cmp.ready {
-  min-height: 500px;
-}
+.maps .maps-cmp {
+  min-height: 500px; }
+.maps .hidden {
+  opacity: 0;
+  transition: 200ms ease-in-out; }
