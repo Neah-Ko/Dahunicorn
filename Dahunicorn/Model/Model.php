@@ -46,6 +46,7 @@ abstract class Model {
         }
         return $list;
     }
+
     public function __get($fieldName) {
         $varName = "_".$fieldName;
         if (property_exists(get_class($this), $varName))
@@ -53,6 +54,7 @@ abstract class Model {
         else
             throw new \Exception("Unknown variable: ".$fieldName);
     }
+
     public function __set($fieldName, $value) {
         $varName = "_".$fieldName;
         if ($value != null) {
