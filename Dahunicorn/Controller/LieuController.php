@@ -11,8 +11,6 @@ class LieuController extends Controller
         $this->render("index");
     }
 
-
-
     public function view_fiche(){
     	$this->render("fiche");
     }
@@ -22,7 +20,7 @@ class LieuController extends Controller
     	if (isset(parameters()["nbpersonnes"]) ) {
 
     		$d = typelieu::findAllSelect("idlieu=2 and idtype=1");//parameters()['res_id']
-print_r($d);
+            print_r($d);
 			//$reserv = new T_e_reserv_pho();
 			$d->typelieu_quantite_estimee = $d->typelieu_quantite_estimee + parameters()["nbpersonnes"];
 			//$reserv->pho_url = "images/".time();
