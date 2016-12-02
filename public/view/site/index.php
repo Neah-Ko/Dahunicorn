@@ -60,13 +60,13 @@ $markers = [
   <div class="selection">
     <paper-listbox>
       <paper-item>
-        <img src="/public/recources/logos/bed.svg" alt="Logement" />
+        <img src="/public/resources/logos/bed.svg" alt="Logement" />
       </paper-item>
       <paper-item>
-        <img src="/public/recources/logos/food.svg" alt="Nourriture" />
+        <img src="/public/resources/logos/food.svg" alt="Nourriture" />
       </paper-item>
       <paper-item>
-        <img src="/public/recources/logos/health.svg" alt="Santé" />
+        <img src="/public/resources/logos/health.svg" alt="Santé" />
       </paper-item>
     </paper-listbox>
   </div>
