@@ -59,14 +59,25 @@ iron-pages {
   height: 100%;
 }
 
-/* line 12, ../../resources/sass/_map.scss */
-.need-choice .title h2 {
+/* line 10, ../../resources/sass/_map.scss */
+section .title {
+  position: relative;
+}
+/* line 13, ../../resources/sass/_map.scss */
+section .title .back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+/* line 19, ../../resources/sass/_map.scss */
+section .title h2 {
   background-color: rgba(242, 68, 5, 0.5);
   padding: 10px;
   text-align: center;
 }
-/* line 20, ../../resources/sass/_map.scss */
-.need-choice .selection paper-listbox {
+
+/* line 30, ../../resources/sass/_map.scss */
+.need-choice paper-listbox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,17 +94,17 @@ iron-pages {
           justify-content: center;
   background: inherit;
 }
-/* line 29, ../../resources/sass/_map.scss */
-.need-choice .selection paper-listbox paper-item iron-image {
+/* line 39, ../../resources/sass/_map.scss */
+.need-choice paper-listbox paper-item iron-image {
   height: 150px;
   width: 150px;
 }
 
-/* line 40, ../../resources/sass/_map.scss */
+/* line 48, ../../resources/sass/_map.scss */
 .maps .maps-cmp {
   min-height: 500px;
 }
-/* line 44, ../../resources/sass/_map.scss */
+/* line 52, ../../resources/sass/_map.scss */
 .maps .progress-cmp {
   display: block;
   width: 100%;
@@ -107,7 +118,7 @@ iron-pages {
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
-/* line 56, ../../resources/sass/_map.scss */
+/* line 64, ../../resources/sass/_map.scss */
 .maps .hidden {
   opacity: 0;
   -webkit-transition: 200ms ease-in-out;

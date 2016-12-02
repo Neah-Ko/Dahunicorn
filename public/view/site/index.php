@@ -56,10 +56,11 @@ $markers = [
 <iron-pages selected="0">
     <section class="need-choice">
         <div class="title">
-            <h2>What are your first need ?</h2>
-            <iron-image preload placeholder="/public/resources/logos/think_man.svg" fade id="think_man-image" alt="Vos besoins" class="sized" sizing="contain" src="/public/resources/logos/think_man.png"></iron-image>
+          <iron-icon class="back" icon="icons:arrow-back"></iron-icon>
+          <h2>What are your first need ?</h2>
         </div>
         <div class="selection">
+          <iron-image preload placeholder="/public/resources/logos/think_man.svg" fade id="think_man-image" alt="Vos besoins" class="sized" sizing="contain" src="/public/resources/logos/think_man.png"></iron-image>
             <paper-listbox>
                 <paper-item>
                     <iron-image preload placeholder="/public/resources/logos/bed.svg" fade id="bed-image" alt="Logement" class="sized" sizing="contain" src="/public/resources/logos/bed.png"></iron-image>
@@ -76,10 +77,11 @@ $markers = [
 
     <section class="range-choice">
         <div class="title">
-            <h2>What do you need first ?</h2>
-            <iron-image preload placeholder="/public/resources/logos/search_man.svg" fade id="search_man-image" alt="Distance de recherche" class="sized" sizing="contain" src="/public/resources/logos/search_man.png"></iron-image>
+          <iron-icon class="back" icon="icons:arrow-back"></iron-icon>
+          <h2>What do you need first ?</h2>
         </div>
         <div class="selection">
+          <iron-image preload placeholder="/public/resources/logos/search_man.svg" fade id="search_man-image" alt="Distance de recherche" class="sized" sizing="contain" src="/public/resources/logos/search_man.png"></iron-image>
           <paper-slider pin value="5"></paper-slider>
         </div>
     </section>
@@ -110,7 +112,8 @@ $markers = [
 <script>
     var pages = document.querySelector('iron-pages');
     pages.addEventListener('click', function(e) {
-        console.log(e);
+      if( pages.selected < pages.childElementCount ) {
         pages.selectNext();
+      }
     });
 </script>
