@@ -15,8 +15,10 @@
 	<link rel="import" href="/public/bower/google-map/google-map-poly.html">
 	<link rel="import" href="/public/bower/google-map/google-map-directions.html">
 
-  <link rel="import" href="/public/bower/paper-item/paper-item.html">
   <link rel="import" href="/public/bower/iron-collapse/iron-collapse.html">
+  <link rel="import" href="/public/bower/iron-image/iron-image.html">
+
+  <link rel="import" href="/public/bower/paper-item/paper-item.html">
   <link rel="import" href="/public/bower/paper-listbox/paper-listbox.html">
   <link rel="import" href="/public/bower/paper-progress/paper-progress.html">
 </head>
