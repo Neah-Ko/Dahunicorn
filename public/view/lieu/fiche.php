@@ -6,26 +6,3 @@
 		<input type="submit" name="reserver" value="reserver">
 	</form>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
