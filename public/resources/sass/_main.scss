@@ -1,13 +1,19 @@
 @import url( 'https://fonts.googleapis.com/css?family=Oswald');
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Oswald', sans-serif;
-}
 /* Palette de couleurs */
 $noir: #2C363F;
 $beige: #F2E7AC;
 $jaune_claire: #F2B705;
 $jaune: #F29F05;
 $orange: #F24405;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: 'Oswald', sans-serif;
+    background-color: $beige;
+    color: $noir;
+}

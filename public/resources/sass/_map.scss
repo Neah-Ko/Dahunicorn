@@ -1,5 +1,10 @@
 .need-choice {
     background: $jaune;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
     .title {
         h2 {
@@ -29,7 +34,11 @@
 }
 
 .maps {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
     .maps-cmp {
         min-height: 500px;
