@@ -1,6 +1,7 @@
 <?php
 
 namespace Dahunicorn\Controller;
+use Dahunicorn\Model\Lieu;
 
 /**
  * Controlleur gérant toutes les actions liées à un lieu.
@@ -8,7 +9,7 @@ namespace Dahunicorn\Controller;
 class LieuController extends Controller
 {
     public function index() {
-        $this->render("index");
+        $this->render("index", ["lieux" => Lieu::findAll()]);
     }
 
     public function view_fiche(){

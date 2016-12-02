@@ -2,4 +2,4 @@
 
 <?php
 
-var_dump($data);
+var_dump(json_encode($data["lieux"]));
