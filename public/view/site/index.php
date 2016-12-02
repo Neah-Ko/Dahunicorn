@@ -1,16 +1,3 @@
-<section class="useless">
-  <div class="links">
-    <ul>
-      <li>
-        <a href="https://dahunicorn-2016-tekreme73.c9users.io/">HOME</a>
-      </li>
-        <li>
-        <a href="https://dahunicorn-2016-tekreme73.c9users.io/phpmyadmin" target="_blank">PHPMYADMIN</a>
-      </li>
-    </ul>
-  </div>
-</section>
-
 <?php
 
 $markers = [
@@ -65,6 +52,9 @@ $markers = [
   ];
 
 ?>
+
+
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCw3j24INjRLtWf3fAlKnWC4GtksBIMiHs'></script><div style='overflow:hidden;height:400px;width:520px;'><div id='gmap_canvas' style='height:400px;width:520px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://add-map.org/'>google maps embedded</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=aff112c57315aa96ee4c4536fd6cd844e6ac64d5'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(45.5646,5.926500000000033),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(45.5646,5.926500000000033)});infowindow = new google.maps.InfoWindow({content:'<strong></strong><br><br> Chambéry<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 
 <section class="">
   <div class="maps">

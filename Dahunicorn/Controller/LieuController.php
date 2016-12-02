@@ -39,4 +39,8 @@ print_r($d);
     	}
     }
 
+    public function seachLieu(){
+
+    }
+
 }
