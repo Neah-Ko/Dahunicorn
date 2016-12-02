@@ -8,7 +8,7 @@ if (isset($_GET["r"])) {
 		list($controller, $action) = array($route, "index");
 	else list($controller, $action) = explode("/", $route);
 
-	$controller = ucfirst($controller)."Controller";
+	$controller = "\\Dahunicorn\\Controller\\".ucfirst($controller)."Controller";
 	$c = new $controller();
 	$c->$action();
 } else {
