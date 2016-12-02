@@ -1,0 +1,26 @@
+{
+  "name": "Dahunicorn",
+  "homepage": "https://github.com/Neah-Ko/Dahunicorn",
+  "authors": [
+    "tekreme73 <tekreme73@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "google-map": "GoogleWebComponents/google-map#^1.1.13",
+    "paper-item": "polymerelements/paper-item#^1.2.1",
+    "paper-listbox": "polymerelements/paper-listbox#^1.1.2",
+    "paper-progress": "PolymerElements/paper-progress#^1.0.11",
+    "paper-slider": "PolymerElements/paper-slider#^1.0.12"
+  }
+}

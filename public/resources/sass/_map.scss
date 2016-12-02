@@ -1,0 +1,10 @@
+.maps {
+  .maps-cmp {
+    min-height: 500px;
+  }
+
+  .hidden {
+    opacity: 0;
+    transition: 200ms ease-in-out;
+  }
+}

@@ -1,0 +1,6 @@
+/db.php
+
+/vendor/
+node_modules
+/public/bower
+bower_components
