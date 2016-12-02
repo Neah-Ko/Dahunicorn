@@ -54,12 +54,12 @@ $markers = [
 ?>
 
 <header>
-    <h1>A la rescousse !</h1>
+    <h1>HELP FOR REFUGEES</h1>
 </header>
 
 <section class="need-choice">
   <div class="title">
-    What do you need first ?
+      <h2>What do you need first ?</h2>
   </div>
   <div class="selection">
     <paper-listbox>

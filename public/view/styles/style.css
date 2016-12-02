@@ -25,7 +25,14 @@ header h1 {
 
 /* line 1, ../../resources/sass/_body.scss */
 body {
+  color: #2C363F;
   background-color: #F2E7AC;
+}
+/* line 4, ../../resources/sass/_body.scss */
+body h2 {
+  background-color: rgba(242, 68, 5, 0.5);
+  padding: 10px;
+  text-align: center;
 }
 
 /* line 2, ../../resources/sass/_map.scss */
