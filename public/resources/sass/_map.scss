@@ -3,6 +3,13 @@
     min-height: 500px;
   }
 
+  .progress-cmp {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+  }
+
   .hidden {
     opacity: 0;
     transition: 200ms ease-in-out;
