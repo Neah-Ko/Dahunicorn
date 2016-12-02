@@ -22,3 +22,8 @@
 
 <body>
 	<main>
+		<nav>
+			<ul>
+				<li><a href="index.php/?r=Association/Register">Enregistrer une association</a></li>
+			</ul>
+		</nav>

@@ -25,7 +25,7 @@
 	<input type="text" id="adr_rue" name="adr_rue" required>
 	</p><p>
 	<label for="adr_comp">Complément : </label>
-	<input type="text" id="adr_comp" name="adr_comp" required>
+	<input type="text" id="adr_comp" name="adr_comp">
 	</p><p>
 	<label for="adr_cp">Code postal : </label>
 	<input type="text" id="adr_cp" name="adr_cp" required>
