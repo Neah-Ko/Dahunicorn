@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<title>InfoMigrant</title>
 	<base href="/public"/>
-	<link rel="stylesheet" href="styles/style.css" />
+	<link rel="stylesheet" href="/public/view/styles/style.css" />
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
 	<script title="webcomponentsjs" src="/public/bower/webcomponentsjs/webcomponents-lite.min.js"></script>
