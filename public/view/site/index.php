@@ -54,23 +54,23 @@ $markers = [
 ?>
 
 <header>
-    <h1>A la rescousse !</h1>
+    <h1>HELP FOR REFUGEES</h1>
 </header>
 
 <section class="need-choice">
   <div class="title">
-    What do you need first ?
+      <h2>What do you need first ?</h2>
   </div>
   <div class="selection">
     <paper-listbox>
       <paper-item>
-        <img src="/public/resources/logos/bed.svg" alt="Logement" />
+        <iron-image preload placeholder="/public/resources/logos/bed.jpg" fade id="bed-image" alt="Logement" class="sized" sizing="contain" src="/public/resources/logos/bed.svg"></iron-image>
       </paper-item>
       <paper-item>
-        <img src="/public/resources/logos/food.svg" alt="Nourriture" />
+        <iron-image preload placeholder="/public/resources/logos/food.jpg" fade id="food-image" alt="Nourriture" class="sized" sizing="contain" src="/public/resources/logos/food.svg"></iron-image>
       </paper-item>
       <paper-item>
-        <img src="/public/resources/logos/health.svg" alt="Santé" />
+        <iron-image preload placeholder="/public/resources/logos/health.jpg" fade id="health-image" alt="Santé" class="sized" sizing="contain" src="/public/resources/logos/health.svg"></iron-image>
       </paper-item>
     </paper-listbox>
   </div>

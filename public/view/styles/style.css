@@ -1,10 +1,77 @@
-/* line 1, ../../../ressources/sass/_main.scss */
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+/* line 3, ../../resources/sass/_main.scss */
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Oswald', sans-serif;
 }
 
-/* line 3, ../../../ressources/sass/_map.scss */
-.maps .maps-cmp.ready {
+/* Palette de couleurs */
+/* line 1, ../../resources/sass/_header.scss */
+header {
+  padding: 20px;
+  background-color: #2C363F;
+  box-shadow: 0 0 20px #2C363F;
+}
+/* line 5, ../../resources/sass/_header.scss */
+header h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #F2E7AC;
+}
+
+/* line 1, ../../resources/sass/_body.scss */
+body {
+  color: #2C363F;
+  background-color: #F2E7AC;
+}
+/* line 4, ../../resources/sass/_body.scss */
+body h2 {
+  background-color: rgba(242, 68, 5, 0.5);
+  padding: 10px;
+  text-align: center;
+}
+
+/* line 1, ../../resources/sass/_map.scss */
+.need-choice {
+  background: #F29F05;
+}
+/* line 7, ../../resources/sass/_map.scss */
+.need-choice .selection paper-listbox {
+  display: flex;
+  margin: 0 auto;
+  max-width: 600px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 19, ../../resources/sass/_map.scss */
+.maps {
+  position: relative;
+}
+/* line 22, ../../resources/sass/_map.scss */
+.maps .maps-cmp {
   min-height: 500px;
+}
+/* line 26, ../../resources/sass/_map.scss */
+.maps .progress-cmp {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%) translateY(-50%);
+}
+/* line 38, ../../resources/sass/_map.scss */
+.maps .hidden {
+  opacity: 0;
+  transition: 200ms ease-in-out;
+}
+
+/* line 1, ../../resources/sass/_footer.scss */
+footer {
+  background-color: #2C363F;
 }

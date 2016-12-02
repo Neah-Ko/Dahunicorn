@@ -1,10 +1,42 @@
-.maps {
-  .maps-cmp {
-    min-height: 500px;
-  }
+.need-choice {
+  background: $jaune;
 
-  .hidden {
-    opacity: 0;
-    transition: 200ms ease-in-out;
-  }
+    .title {}
+
+    .selection {
+        paper-listbox {
+            display: flex;
+            margin: 0 auto;
+            max-width: 600px;
+            align-items: center;
+            justify-content: center;
+
+            paper-item {}
+        }
+    }
+}
+
+.maps {
+    position: relative;
+
+    .maps-cmp {
+        min-height: 500px;
+    }
+
+    .progress-cmp {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin: 20px 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%)translateY(-50%);
+    }
+
+    .hidden {
+        opacity: 0;
+        transition: 200ms ease-in-out;
+    }
 }
