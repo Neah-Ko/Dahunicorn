@@ -60,13 +60,13 @@ $markers = [
   <div class="selection">
     <paper-listbox>
       <paper-item>
-        <iron-image preload placeholder="/public/resources/logos/bed.jpg" fade id="bed-image" alt="Logement" class="sized" sizing="contain" src="/public/resources/logos/bed.svg"></iron-image>
+        <iron-image preload placeholder="/public/resources/logos/bed.svg" fade id="bed-image" alt="Logement" class="sized" sizing="contain" src="/public/resources/logos/bed.png"></iron-image>
       </paper-item>
       <paper-item>
-        <iron-image preload placeholder="/public/resources/logos/food.jpg" fade id="food-image" alt="Nourriture" class="sized" sizing="contain" src="/public/resources/logos/food.svg"></iron-image>
+        <iron-image preload placeholder="/public/resources/logos/food.svg" fade id="food-image" alt="Nourriture" class="sized" sizing="contain" src="/public/resources/logos/food.png"></iron-image>
       </paper-item>
       <paper-item>
-        <iron-image preload placeholder="/public/resources/logos/health.jpg" fade id="health-image" alt="Santé" class="sized" sizing="contain" src="/public/resources/logos/health.svg"></iron-image>
+        <iron-image preload placeholder="/public/resources/logos/health.svg" fade id="health-image" alt="Santé" class="sized" sizing="contain" src="/public/resources/logos/health.png"></iron-image>
       </paper-item>
     </paper-listbox>
   </div>
