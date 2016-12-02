@@ -9,19 +9,14 @@
 /* Palette de couleurs */
 /* line 1, ../../resources/sass/_header.scss */
 header {
-  height: 100px;
+  padding: 20px;
   background-color: #2C363F;
   box-shadow: 0 0 20px #2C363F;
 }
 /* line 5, ../../resources/sass/_header.scss */
 header h1 {
+  font-size: 2rem;
   text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   color: #F2E7AC;
 }
 
@@ -43,20 +38,11 @@ body h2 {
 }
 /* line 7, ../../resources/sass/_map.scss */
 .need-choice .selection paper-listbox {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 600px;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /* line 19, ../../resources/sass/_map.scss */
@@ -77,9 +63,7 @@ body h2 {
   top: 50%;
   left: 50%;
   z-index: 1;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 /* line 38, ../../resources/sass/_map.scss */
 .maps .hidden {
