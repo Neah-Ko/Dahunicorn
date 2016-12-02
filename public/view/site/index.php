@@ -56,8 +56,8 @@ $markers = [
 <iron-pages selected="0">
     <section class="need-choice">
         <div class="title">
-          <iron-icon class="back" icon="icons:arrow-back"></iron-icon>
-          <h2>What are your first need ?</h2>
+          <paper-icon-button class="back" icon="arrow-back" title="back"></paper-icon-button>
+          <h2>What are your first need?</h2>
         </div>
         <div class="selection">
           <iron-image preload placeholder="/public/resources/logos/think_man.svg" fade id="think_man-image" alt="Vos besoins" class="sized" sizing="contain" src="/public/resources/logos/think_man.png"></iron-image>
@@ -77,8 +77,8 @@ $markers = [
 
     <section class="range-choice">
         <div class="title">
-          <iron-icon class="back" icon="icons:arrow-back"></iron-icon>
-          <h2>What do you need first ?</h2>
+          <paper-icon-button class="back" icon="arrow-back" title="back"></paper-icon-button>
+          <h2>How far can you go?</h2>
         </div>
         <div class="selection">
           <iron-image preload placeholder="/public/resources/logos/search_man.svg" fade id="search_man-image" alt="Distance de recherche" class="sized" sizing="contain" src="/public/resources/logos/search_man.png"></iron-image>
@@ -99,8 +99,8 @@ $markers = [
                 <?php endforeach; ?>
             </google-map>
             <script type="text/javascript">
-                var map = document.querySelector('google-map');
-                var paper_progress = document.querySelector('paper-progress');
+                var map = document.querySelector('.maps google-map');
+                var paper_progress = document.querySelector('.maps paper-progress');
                 map.addEventListener('google-map-ready', function(e) {
                     paper_progress.classList.add("hidden");
                     map.classList.remove("hidden");
@@ -110,10 +110,24 @@ $markers = [
     </section>
 </iron-pages>
 <script>
-    var pages = document.querySelector('iron-pages');
-    pages.addEventListener('click', function(e) {
-      if( pages.selected < pages.childElementCount - 1 ) {
-        pages.selectNext();
-      }
+    var backButtons = document.querySelectorAll('iron-pages .back');
+    backButtons.forEach( backButton => {
+      backButton.addEventListener('click', function(e) {
+        var pages = document.querySelector('iron-pages');
+        if( pages.selected > 0 ) {
+          pages.selectPrevious();
+          e.preventDefault();
+        }
+      });
+    });
+    
+    var nextButtons = document.querySelectorAll('iron-pages .next');
+    nextButtons.forEach( nextButton => {
+      nextButton.addEventListener('click', function(e) {
+        var pages = document.querySelector('iron-pages');
+        if( pages.selected < pages.childElementCount - 1 ) {
+          pages.selectNext();
+        }
+      });
     });
 </script>

@@ -1,110 +1,89 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 /* Palette de couleurs */
-/* line 9, ../../resources/sass/_main.scss */
 * {
   margin: 0;
   padding: 0;
-}
+  box-sizing: border-box; }
 
-/* line 14, ../../resources/sass/_main.scss */
 body,
 html {
   font-family: 'Oswald', sans-serif;
   background-color: #F2E7AC;
-  color: #2C363F;
-}
+  color: #2C363F; }
 
-/* line 1, ../../resources/sass/_header.scss */
 header {
   padding: 20px;
   background-color: #2C363F;
-  box-shadow: 0 0 20px #2C363F;
-}
-/* line 6, ../../resources/sass/_header.scss */
-header h1 {
-  font-size: 2rem;
-  text-align: center;
-  color: #F2E7AC;
-}
+  box-shadow: 0 0 20px #2C363F; }
+  header h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #F2E7AC; }
 
-/* line 1, ../../resources/sass/_body.scss */
 body {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-}
-/* line 7, ../../resources/sass/_body.scss */
-body main {
-  position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
+  flex-direction: column;
+  position: relative; }
+  body main {
+    position: relative;
+    flex: 1;
+    overflow: hidden; }
 
-/* line 1, ../../resources/sass/_map.scss */
 iron-pages {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
-/* line 10, ../../resources/sass/_map.scss */
-section .title {
-  position: relative;
-}
-/* line 13, ../../resources/sass/_map.scss */
-section .title .back {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-/* line 19, ../../resources/sass/_map.scss */
-section .title h2 {
-  background-color: rgba(242, 68, 5, 0.5);
-  padding: 10px;
-  text-align: center;
-}
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; }
+  section .title {
+    position: relative; }
+    section .title .back {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%); }
+    section .title h2 {
+      background-color: rgba(242, 68, 5, 0.5);
+      padding: 10px;
+      text-align: center; }
+  section .selection {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: inherit;
+    flex: 1; }
 
-/* line 30, ../../resources/sass/_map.scss */
 .need-choice paper-listbox {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 600px;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: inherit;
-}
-/* line 39, ../../resources/sass/_map.scss */
-.need-choice paper-listbox paper-item iron-image {
-  height: 150px;
-  width: 150px;
-}
+  align-items: center;
+  justify-content: center;
+  background: inherit; }
+  .need-choice paper-listbox paper-item iron-image {
+    height: 150px;
+    width: 150px; }
 
-/* line 48, ../../resources/sass/_map.scss */
+.range-choice .selection {
+  display: flex;
+  margin: 0 auto;
+  max-width: 600px;
+  align-items: center;
+  justify-content: center;
+  background: inherit; }
+
 .maps .maps-cmp {
-  min-height: 500px;
-}
-/* line 52, ../../resources/sass/_map.scss */
+  min-height: 500px; }
 .maps .progress-cmp {
   display: block;
   width: 100%;
@@ -114,18 +93,12 @@ section .title h2 {
   top: 50%;
   left: 50%;
   z-index: 1;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-}
-/* line 64, ../../resources/sass/_map.scss */
+  transform: translateX(-50%) translateY(-50%); }
 .maps .hidden {
   opacity: 0;
-  -webkit-transition: 200ms ease-in-out;
-          transition: 200ms ease-in-out;
-}
+  transition: 200ms ease-in-out; }
 
-/* line 1, ../../resources/sass/_footer.scss */
 footer {
-  background-color: #2C363F;
-}
+  background-color: #2C363F; }
+
+/*# sourceMappingURL=style.css.map */

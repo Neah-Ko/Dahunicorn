@@ -7,13 +7,19 @@ iron-pages {
 }
 
 section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+    
     .title {
         position: relative;
 
         .back {
           position: absolute;
-          top: 20px;
+          top: 50%;
           left: 20px;
+          transform: translateY(-50%);
         }
 
         h2 {
@@ -23,7 +29,16 @@ section {
         }
     }
 
-    .selection {}
+    .selection {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1000px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background: inherit;
+        flex: 1;
+    }
 }
 
 .need-choice {
@@ -41,6 +56,18 @@ section {
                 width: 150px;
             }
         }
+    }
+}
+
+.range-choice {
+
+    .selection {
+        display: flex;
+        margin: 0 auto;
+        max-width: 600px;
+        align-items: center;
+        justify-content: center;
+        background: inherit;
     }
 }
 
