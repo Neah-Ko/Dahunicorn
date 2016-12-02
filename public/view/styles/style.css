@@ -3,3 +3,7 @@
 .maps .maps-cmp.ready {
     min-height: 500px;
 }
+
+.maps .progress-cmp.hide {
+  display: none;
+}
