@@ -92,8 +92,8 @@ $markers = [
       var map = document.querySelector('google-map');
       var paper_progress = document.querySelector('paper-progress');
       map.addEventListener('google-map-ready', function(e) {
-        map.addClass("ready");
-        paper_progress.removeClass("hide");
+        paper_progress.classList.add("ready");
+        map.classList.remove("hide");
       });
     </script>
   </div>
