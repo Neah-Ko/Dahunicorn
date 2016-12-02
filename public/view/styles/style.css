@@ -1,5 +1,5 @@
-/* line 1, ../../../ressources/sass/_header.scss */
-* {
-  margin: 0;
-  padding: 0;
+.maps {}
+
+.maps .maps-cmp.ready {
+    min-height: 500px;
 }
