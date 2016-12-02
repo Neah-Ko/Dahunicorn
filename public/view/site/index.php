@@ -1,16 +1,3 @@
-<section class="useless">
-  <div class="links">
-    <ul>
-      <li>
-        <a href="https://dahunicorn-2016-tekreme73.c9users.io/">HOME</a>
-      </li>
-        <li>
-        <a href="https://dahunicorn-2016-tekreme73.c9users.io/phpmyadmin" target="_blank">PHPMYADMIN</a>
-      </li>
-    </ul>
-  </div>
-</section>
-
 <?php
 
 $markers = [
