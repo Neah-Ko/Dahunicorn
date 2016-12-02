@@ -18,13 +18,8 @@
 				<li>
 					<a href="https://dahunicorn-2016-tekreme73.c9users.io/phpmyadmin" target="_blank">PHPMYADMIN</a>
 				</li>
+				<li>
+					<a href="./?r=Association/Register" target="_blank">Enregistrer une association</a>
+				</li>
 			</ul>
 		</nav>
-		<div class="search">
-			<h1>Je cherche</h1>
-			<form class="searchLieu">
-				Logement : <input type="checkbox" name="logement">
-				Nourriture : <input type="checkbox" name="nourriture">
-				Santé : <input type="checkbox" name="sante">
-			</form>
-		</div>
