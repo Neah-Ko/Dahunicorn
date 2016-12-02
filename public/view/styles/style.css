@@ -1,15 +1,27 @@
+/* line 1, ../../resources/sass/_main.scss */
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
+/* Palette de couleurs */
+/* line 1, ../../resources/sass/_header.scss */
 header {
   height: 100px;
-  background-color: green; }
-  header h1 {
-    text-align: center; }
+  background-color: #2C363F;
+}
+/* line 4, ../../resources/sass/_header.scss */
+header h1 {
+  text-align: center;
+  color: #F2E7AC;
+}
 
+/* line 2, ../../resources/sass/_map.scss */
 .maps .maps-cmp {
-  min-height: 500px; }
+  min-height: 500px;
+}
+/* line 6, ../../resources/sass/_map.scss */
 .maps .hidden {
   opacity: 0;
-  transition: 200ms ease-in-out; }
+  transition: 200ms ease-in-out;
+}
