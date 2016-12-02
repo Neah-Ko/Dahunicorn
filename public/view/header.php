@@ -18,6 +18,7 @@
   <link rel="import" href="/public/bower/paper-item/paper-item.html">
   <link rel="import" href="/public/bower/iron-collapse/iron-collapse.html">
   <link rel="import" href="/public/bower/paper-listbox/paper-listbox.html">
+  <link rel="import" href="/public/bower/paper-progress/paper-progress.html">
 </head>
 
 <body>
