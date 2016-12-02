@@ -11,7 +11,11 @@
             align-items: center;
             justify-content: center;
 
-            paper-item {}
+            paper-item {
+              iron-image {
+                height: 150px;
+              }
+            }
         }
     }
 }
