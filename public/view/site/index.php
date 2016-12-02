@@ -53,16 +53,28 @@ $markers = [
 
 ?>
 
-<div class="search">
-  <h1>Je cherche</h1>
-  <form class="searchLieu">
-    Logement : <input type="checkbox" name="logement">
-    Nourriture : <input type="checkbox" name="nourriture">
-    Santé : <input type="checkbox" name="sante">
-  </form>
-</div>
-<section class="">
+<section class="need-choice">
+  <div class="title">
+    What do you need first ?
+  </div>
+  <div class="selection">
+    <paper-listbox>
+      <paper-item>
+        <img src="" alt="Logement" />
+      </paper-item>
+      <paper-item>
+        <img src="" alt="Nourriture" />
+      </paper-item>
+      <paper-item>
+        <img src="" alt="Santé" />
+      </paper-item>
+    </paper-listbox>
+  </div>
+</section>
+
+<section class="search-result">
   <div class="maps">
+    <paper-progress class="progress-cmp" indeterminate></paper-progress>
     <google-map class="maps-cmp" language="fr" min-zoom="7" latitude="45.525241" longitude="5.84505" fit-to-markers api-key="AIzaSyBTswMklmPyz-JLcu_L8gO2T_8pmucovM0">
       <?php foreach ($markers as $marker_name => $marker_data): ?>
         <?php if( isset( $marker_data['enabled'] ) && $marker_data['enabled'] ): ?>
@@ -76,5 +88,13 @@ $markers = [
       <?php endif; ?>
     <?php endforeach; ?>
     </google-map>
+    <script type="text/javascript">
+      var map = document.querySelector('google-map');
+      var paper_progress = document.querySelector('paper-progress');
+      map.addEventListener('google-map-ready', function(e) {
+        paper_progress.classList.add("hide");
+        map.classList.remove("ready");
+      });
+    </script>
   </div>
 </section>

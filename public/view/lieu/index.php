@@ -1,4 +1,4 @@
-<p>Bonjour tout le monde...</p>
+<h1>Test de l'encodage JSON sur les classes</h1>
 
 <?php
 

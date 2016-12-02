@@ -1,5 +1,10 @@
-.maps {}
+/* line 1, ../../../ressources/sass/_main.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
 
-.maps .maps-cmp {
-    min-height: 500px;
+/* line 3, ../../../ressources/sass/_map.scss */
+.maps .maps-cmp.ready {
+  min-height: 500px;
 }
